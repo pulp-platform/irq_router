@@ -1,0 +1,16 @@
+package:
+  name: irq_router
+  authors: ["Alessandro Ottaviano <aottaviano@iis.ee.ethz.ch>", "Robert Balas <balasr@iis.ee.ethz.ch>"]
+
+dependencies:
+  axi:                    { git: "https://github.com/pulp-platform/axi.git", version: 0.38.0 }
+  register_interface:     { git: "https://github.com/pulp-platform/register_interface.git", version:  0.3.9 }
+  common_cells:           { git: "https://github.com/pulp-platform/common_cells.git", version: 1.21.0 }
+
+sources:
+  - rtl/irq_router_reg_pkg.sv
+  - rtl/irq_router_reg_top.sv
+  - rtl/irq_router.sv
+  - target: test
+    files:
+      - tb/irq_router_tb.sv
